@@ -10,7 +10,7 @@ router.get('/', async function(req, res, next) {
 
     console.log(chalk.bgCyan.black(` <-- Obteniendo listado de mascotas. `));
 
-    if(req.query.sexo=="male" || req.query.sexo=="famale"){
+    if(req.query.sexo=="male" || req.query.sexo=="female"){
         mascotas = mascotas.filter(pet=> pet.dogSex == req.query.sexo)
         console.log(chalk.bgCyan.black(` <-- Filtrado por sexo`));
     }
